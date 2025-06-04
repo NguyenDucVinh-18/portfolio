@@ -7,7 +7,11 @@ import { APP_DATA } from 'helpers/data';
 import { MdFileDownload } from "react-icons/md";
 import { AiFillFire } from "react-icons/ai";
 
-const HeroLeft = () => {
+interface IProps {
+    scrollToMySkills : () => void;
+}
+
+const HeroLeft = (props: IProps) => {
 
     const { t } = useTranslation();
 
@@ -54,6 +58,7 @@ const HeroLeft = () => {
                         border: "1px solid var(--border-hero-right)",
                         color: "var(--text-white-1)"
                     }}
+                    onClick={() => props.scrollToMySkills()} 
                 />
                 <ResizeButton
                     btnText={t("heroSection.cv")}
