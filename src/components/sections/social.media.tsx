@@ -1,7 +1,12 @@
 import { FaFacebook } from "react-icons/fa6";
 import { BsGithub } from "react-icons/bs";
 
-const SocialMedia = (props) => {
+interface IProps {
+    github: string;
+    facebook: string;
+}
+
+const SocialMedia = (props: IProps) => {
     const { github, facebook } = props;
 
     return (
